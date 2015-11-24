@@ -1,2 +1,381 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+
+Zum Berechnen der einzelen Werte und des
+Mittelwerts wurde
+uncertainties \cite{uncertainties} benutzt. Hier wird der Wert
+und der Fehler mit  der Formel nach Gauß'scher Fehlerfortpflanzung
+
+\begin{equation}
+    \phi = \sqrt{\sum_{i=1}^{N} \biggl(\frac{\partial f}{\partial x_i}\biggr)^2
+    \cdot \sigma_i^2}
+    \label{eqn:gauss}
+\end{equation}
+
+berechnet \eqref{eqn:gauss}.
+
+\subsection{Wheatstonesche Brücke}
+
+Mit Hilfe der Wheatstonesche Brücke wurden 2 unbekannte Widerstände bestimmt.
+Die Formel, die verwendet wurde, ist die Folgende:
+
+\begin{equation}
+  R_x = R_2\frac{R_3}{R_4}.
+  \label{eqn:Widerstand}
+\end{equation}
+
+Hierbei ist $R_x$ der unbekannte Widerstand, $R_2$ ist der bekannnte
+Widerstand als festes Bauteil und $R_3$ und $R_4$ sind die mit dem
+Potentiometer bestimmten Werte.
+Zur Berechnung des Mittelwerts wurde die Formel \eqref{eqn:Rxm} benutzt.
+
+\begin{equation}
+  R_{xm} = \frac{1}{3}(R_{x1} + R_{x2} + R_{x3})
+  \label{eqn:Rxm}
+\end{equation}
+
+\subsubsection{Messwerte und Ergebnis}
+
+\paragraph{Bestimmung von Wert 13}
+
+\begin{table}
+  \centering
+  \caption{Tabelle mit den Messdaten und dem Ergebnis $R_{xi}$.}
+  \label{tab:Widerstand13}
+  \begin{tabular}{c c c c}
+    \toprule
+    $R_2$ \ /\ \si{\Omega} & $R_3 \ /\ \si{\Omega}$ & $R_4 \ /\ \si{\Omega}$ & $R_x \ /\ \si{\Omega}$\\
+    \midrule
+    \num{332 +- 1} & \num{540 +- 3} & \num{460 +- 2} & \num{390 +- 3}\\
+    \num{664 +- 1} & \num{369 +- 2} & \num{631 +- 3} & \num{388 +- 3}\\
+    \num{1000 +- 2} & \num{279 +- 1} & \num{721 +- 4} & \num{387 +- 3}\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+In Tabelle \ref{tab:Widerstand13} sind die Messdaten und die einzelnen
+Ergebnisse bei der Bestimmung von Wert 13 aufgetragen.
+
+Der Mittelwert beträgt dann $R_{xm} = \SI{319(1)}{\Omega}$.
+
+\FloatBarrier
+\paragraph{Bestimmung von Wert 12}
+
+\begin{table}
+  \centering
+  \caption{Tabelle mit den Messdaten und dem Ergebnis $R_{xi}$.}
+  \label{tab:Widerstand12}
+  \begin{tabular}{c c c c}
+    \toprule
+    $R_2 \ /\ \si{\Omega}$ & $R_3 \ /\ \si{\Omega}$ & $R_4 \ /\ \si{\Omega}$ & $R_x \ /\ \si{\Omega}$\\
+    \midrule
+    \num{332 +- 1} & \num{540 +- 3} & \num{460 +- 2} & \num{390 +- 3}\\
+    \num{664 +- 1} & \num{369 +- 2} & \num{631 +- 3} & \num{388 +- 3}\\
+    \num{1000 +- 2} & \num{279 +- 1} & \num{721 +- 4} & \num{387 +- 3}\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+In Tabelle \ref{tab:Widerstand12} sind die Messdaten und die einzelnen
+Ergebnisse bei der Bestimmung von Wert 12 aufgetragen.
+
+Der Mittelwert beträgt dann $R_{xm} = \SI{388(2)}{\Omega}$.
+
+\subsection{Kapazitätsmessbrücke}
+
+Mit Hilfe der Kapazitätsmessbrücke wurden die Kapazitäten
+der zwei idealen Kondensatoren Wert 1 und 3 und des realen
+Kondensators Wert 9 bestimmt.
+
+Bei beiden Arten wird die Kapazität mit der Gleichung \eqref{eqn:kapazitaet}
+bestimmt.
+
+\begin{equation}
+  C_x = C_2\frac{R_4}{R_3}.
+  \label{eqn:kapazitaet}
+\end{equation}
+
+Hierbei ist $C_2$ ein Kondensator mit bekannter fester Kapazität. $R_3$ und
+$R_4$ wurden mit dem Potentiometer bestimmt.
+Bei den realen Kondensatoren wird  der Widerstand mit Formel
+\eqref{eqn:Widerstand} berechnet.
+
+Der Mittelwert des Widerstands wird wieder mit Gleichung \eqref{eqn:Rxm} berechnet.
+Außerdem wird der Mittelwert der Kapazität mit Gleichung \eqref{eqn:Cxm} berechnet.
+
+\begin{equation}
+  Cxm = \frac{1}{3}(C_{x1} + C_{x2} + C_{x3})
+  \label{eqn:Cxm}
+\end{equation}
+
+$C_{x1}$, $C_{x2}$ und $C_{x3}$ sind die einzeln ausgerechneten Kapazitäten der
+jeweiligen Messung.
+
+\subsubsection{Messwerte und Ergebnis}
+\label{subsubsec:kapme}
+
+\paragraph{Bestimmung von Wert 1}
+
+\begin{table}
+  \centering
+  \caption{Tabelle mit den Messdaten und dem Ergebnis $C_{xi}$.}
+  \label{tab:Kapazitaet1}
+  \begin{tabular}{c c c c}
+    \toprule
+    $C_2 \ /\ 10^-7 \si{\farad}$ & $R_3 \ /\ \si{\Omega}$ & $R_4 \ /\ \si{\Omega}$ & $C_{xi} \ /\ 10^-7 \si{\farad}$\\
+    \midrule
+    \num{3.990 +- 0.008} & \num{375 +- 2} & \num{625 +- 3} & \num{6.65 +- 0.05}\\
+    \num{7.50 +- 0.02} & \num{530 +- 3} & \num{470 +- 2} & \num{6.65 +- 0.05}\\
+    \num{9.92 +- 0.02} & \num{601 +- 3} & \num{399 +- 2} & \num{6.59 +- 0.05}\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+In Tabelle \ref{tab:Kapazitaet1} sind die Messdaten und die einzelnen
+Ergebnisse bei der Bestimmung der Kapazität von Wert 1 aufgetragen.
+
+Der Mittelwert beträgt dann $C_{xm} = \SI{6.63(3)e-7}{\farad}$.
+
+\paragraph{Bestimmung von Wert 3}
+
+\begin{table}
+  \centering
+  \caption{Tabelle mit den Messdaten und dem Ergebnis $C_{xi}$.}
+  \label{tab:Kapazitaet3}
+  \begin{tabular}{c c c c}
+    \toprule
+    $C_2 \ /\ 10^-7 \si{\farad}$ & $R_3 \ /\ \si{\Omega}$ & $R_4 \ /\ \si{\Omega}$ & $C_{xi} \ /\ 10^-7 \si{\farad}$\\
+    \midrule
+    \num{3.990 +- 0.008} & \num{486 +- 2} & \num{514 +- 3} & \num{4.22 +- 0.03}\\
+    \num{7.50 +- 0.02} & \num{640 +- 3} & \num{360 +- 2} & \num{4.22 +- 0.03}\\
+    \num{9.92 +- 0.02} & \num{703 +- 4} & \num{279 +- 2} & \num{4.19 +- 0.03}\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+In Tabelle \ref{tab:Kapazitaet3} sind die Messdaten und die einzelnen
+Ergebnisse bei der Bestimmung der Kapazität von Wert 1 aufgetragen.
+
+Der Mittelwert beträgt dann $C_{xm} = \SI{4.21(2)e-7}{\farad}$.
+
+\paragraph{Bestimmung von Wert 9}
+
+\begin{table}
+  \centering
+  \caption{Tabelle mit den Messdaten und den Ergebnissen $C_{xi}$ und $R_{xi}$.}
+  \label{tab:Kapazitaet9}
+  \begin{tabular}{c c c c c c}
+    \toprule
+    $C_2 \ /\ 10^-7 \si{\farad}$ & $R_2 \ /\ \si{\Omega}$ & $R_3 \ /\ \si{\Omega}$ &
+    $R_4 \ /\ \si{\Omega}$ & $C_{xi} \ /\ 10^-7 \si{\farad}$ & $R_{xi} \ /\ \si{\Omega}$ \\
+    \midrule
+    \num{3.990 +- 0.008} & \num{512 +- 15} & \num{479 +- 2} & \num{521 +- 3} & \num{4.34 +- 0.03} & \num{471 +- 15}\\
+    \num{7.50 +- 0.02} & \num{270 +- 8} & \num{633 +- 3} & \num{367 +- 2} & \num{4.35 +- 0.03} & \num{466 +- 14}\\
+    \num{9.92 +- 0.02} & \num{207 +- 6} & \num{694 +- 4} & \num{306 +- 2} & \num{4.37 +- 0.03} & \num{470 +- 15}\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+In Tabelle \ref{tab:Kapazitaet9} sind die Messdaten und die einzelnen
+Ergebnisse bei der Bestimmung der Kapazität und des Widerstands
+von Wert 9 aufgetragen.
+
+Der Mittelwert der Kapazität beträgt dann $C_{xm} = \SI{4.21(2)e-7}{\farad}$.
+Außerdem beträgt der Mittelwert des Widerstands $R_{xm} =
+\SI{469(8)}{\Omega}$.
+
+\subsection{Induktivitätsmessbrücke}
+\label{subsec:auswimb}
+
+Die Induktivität und der Widerstand einer Spule wird mit Hilfe der Induktivitätsmessbrücke
+bestimmt.
+
+Zur Bestimmung des Widerstands wird erneut die Gleichung \eqref{eqn:Widerstand}
+verwendet. $R_3$ und $R_4$ sind weiterhin die per Potentiometer bestimmten Werte.
+Nun ist $R_2$ aber ein variabler Widerstand. Der Mittelwert wird hier ebenfalls
+mit Gleichung \eqref{eqn:Rxm} berechnet.
+
+Zur Berechnung der Induktivität wird die Gleichung \eqref{eqn:induk} verwendet.
+Es gilt
+
+\begin{equation}
+  L_x = L_2\frac{R_3}{R_4}.
+  \label{eqn:induk}
+\end{equation}
+
+$L_2$ ist die Spule mit bekannter Induktivität. Der Mittelwert der Induktivität wird
+mit Gleichung \eqref{eqn:Lxm} bestimmt.
+
+Es gilt:
+
+\begin{equation}
+  Lxm = \frac{1}{3}(L_{x1} + L_{x2} + L_{x3}).
+  \label{eqn:Lxm}
+\end{equation}
+
+\subsubsection{Messwerte und Ergebnis}
+
+\begin{table}
+  \centering
+  \caption{Tabelle mit den Messdaten und den Ergebnissen $L_{xi}$ und $R_{xi}$.}
+  \label{tab:Induk17}
+  \begin{tabular}{c c c c c c}
+    \toprule
+    $L_2 \ /\ \si{\milli\henry}$ & $R_2 \ /\ \si{\Omega}$ & $R_3 \ /\ \si{\Omega}$ &
+    $R_4 \ /\ \si{\Omega}$ & $L_{xi} \ /\ \si{\milli\henry}$ & $R_{xi} \ /\ \si{\Omega}$ \\
+    \midrule
+    \num{14.60 +- 0.03} & \num{34 +- 1} & \num{741 +- 4} & \num{259 +- 1} & \num{41.8 +- 0.3} & \num{97 +- 3}\\
+    \num{20.10 +- 0.04} & \num{41 +- 1} & \num{676 +- 3} & \num{324 +- 2} & \num{41.9 +- 0.3} & \num{86 +- 3}\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+In Tabelle \ref{tab:Induk17} sind die Messdaten und die einzelnen
+Ergebnisse bei der Bestimmung der Induktivität und des Widerstands
+von der Spule Wert 17 aufgetragen.
+
+Der Mittelwert der Induktivität beträgt nach Gleichung \eqref{eqn:Lxm}
+$L_{xm} = \SI{41.9(2)}{\milli\henry}.$
+
+Der Mittelwert des Widerstands beträgt nach Gleichung \eqref{eqn:Rxm}
+$R_{xm} = \SI{91(2)}{\Omega}.$
+
+\subsection{Maxwell-Brücke}
+
+Darauf folgend wird die Induktivität und der Widerstand von Spule Wert 17 erneut
+bestimmt. Diesmal aber mit Hilfe der Maxwell-Brücke.
+
+Die Widerstandswerte weden wie in Kapitel \ref{subsec:auswimb} mit den Gleichungen
+\eqref{eqn:Widerstand} und \eqref{eqn:Rxm} berechnet.
+
+Die Induktivität wird mit der Gleichung \eqref{eqn:indukmax} bestimmt.
+Es gilt:
+
+\begin{equation}
+  L_x = R_2 R_3 C_4.
+  \label{eqn:indukmax}
+\end{equation}
+
+Hier ist $R_3$ einer der beiden variablen Widerstände in der Schaltung. $R_2$
+ist ein bekannter fester Widerstand und $C_4$ ist ein Kondensator mit bekannter
+fester Kapazität.
+Der Mittelwert der Induktivität wird mit Gleichung \eqref{eqn:Lxm} berechnet.
+
+\subsubsection{Messwerte und Ergebnis}
+
+\begin{table}
+  \centering
+  \caption{Tabelle mit den Messdaten und den Ergebnissen $L_{xi}$ und $R_{xi}$.}
+  \label{tab:Indukmax17}
+  \begin{tabular}{c c c c c c}
+    \toprule
+    $C_4 \ /\ \si{\nano\farad}$ & $R_2 \ /\ \si{\Omega}$ & $R_3 \ /\ \si{\Omega}$ &
+    $R_4 \ /\ \si{\Omega}$ & $L_{xi} \ /\ \si{\milli\henry}$ & $R_{xi} \ /\ \si{\Omega}$ \\
+    \midrule
+    \num{750 +- 2} & \num{332 +- 1} & \num{170 +- 5} & \num{612 +- 18} & \num{42 +- 1} & \num{92 +- 4}\\
+    \num{750 +- 2} & \num{664 +- 1} & \num{84 +- 3} & \num{614 +- 18} & \num{42 +- 1} & \num{91 +- 4}\\
+    \num{750 +- 2} & \num{1000 +- 2} & \num{55 +- 2} & \num{626 +- 19} & \num{41 +- 1} & \num{88 +- 4}\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Der Mittelwert der Induktivität beträgt nach Gleichung \eqref{eqn:Lxm}
+$L_{xm} = \SI{41.8(7)}{\milli\henry}.$
+
+Der Mittelwert des Widerstands beträgt nach Gleichung \eqref{eqn:Rxm}
+$R_{xm} = \SI{90(2)}{\Omega}.$
+
+\subsection{Wien-Robinson-Brücke}
+
+\subsubsection{Messwerte}
+
+\begin{table}
+  \centering
+  \caption{Tabelle mit den Messdaten der Wien-Robinson-Brücke.}
+  \label{tab:frequenz}
+  \begin{tabular}{c c}
+    \toprule
+    $\nu \ /\ \si{\hertz}$ & $U_{Br} \ /\ \si{\milli\volt}$\\
+    \midrule
+    20 & 1450\\
+    40 & 1350\\
+    60 & 1200\\
+    80 & 1030\\
+    100 & 860\\
+    110 & 780\\
+    120 & 700\\
+    130 & 620\\
+    140 & 550\\
+    150 & 475\\
+    160 & 410\\
+    170 & 350\\
+    180 & 295\\
+    190 & 240\\
+    200 & 190\\
+    210 & 140\\
+    220 & 98\\
+    230 & 53\\
+    240 & 15\\
+    250 & 47\\
+    260 & 87\\
+    270 & 125\\
+    280 & 155\\
+    290 & 190\\
+    300 & 220\\
+    400 & 508\\
+    500 & 708\\
+    1000 & 1180\\
+    2000 & 1300\\
+    5000 & 1430\\
+    10000 & 1440\\
+    30000 & 1440\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+In Tabelle \ref{tab:frequenz} sind die Messwerte aus der Messung an der
+Wien-Robinson-Brücke aufgetragen.
+
+Außerdem wurde $U_S$ auf \SI{4.36}{\volt} bestimmt. $R$ war \SI{1}{\kilo\Omega}
+groß. Als Kondensator wurde Wert 1 benutzt, dessen Kapazität $C_{xm}$ in Kapitel
+\ref{subsubsec:kapme} auf gerundete \SI{663}{\nano\farad} bestimmt wurde.
+
+\FloatBarrier
+
+\subsubsection{Rechnung und Plot}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width = \textwidth]{build/plote.pdf}
+  \caption{Plot der Messwerte sowie der Theoriekurve.}
+  \label{fig:WRBplot}
+\end{figure}
+
+In Abbildung \ref{fig:WRBplot} sind die Messwerte $U_{BR}(\nu) \ /\ U_S$ gegen
+$\nu \ /\ \nu_0$ aufgetragen. Außerdem ist dort die Theoriekurve nach Gleichung
+\eqref{eqn:WRBG} eingezeichnet. Der Plot wurde mit dem package Matplotlib aus
+python erstellt \cite{matplotlib}.
+
+Zu bestimmen war außerdem das $\nu_0$ bei dem die Brückenspannung minimal wird.
+
+Dies erfolgt mit Gleichung \eqref{eqn:nu0}:
+
+\begin{equation}
+  \nu_0 = \frac{1}{2 \pi R C}.
+  \label{eqn:nu0}
+\end{equation}
+
+Das Ergebnis ist dann: $\nu_0 = 240$.
+
+\subsection{Klirrfaktor}
+
+Der Klirrfaktor wird mit der Gleichung \eqref{eqn:klirrf} berechnet.
+$U_2$ wird mit
+
+$U_2 = \frac{U_{Br}}{f(2)}$ bestimmt.
+
+In diesem Fall : $U_2 = \frac{\SI{15}{\milli\volt}}{\frac{9}{73}} =
+\SI{122}{\milli\volt}$.
+
+Somit ist der Klirrfaktor:\\
+\\$k = \frac{\SI{122}{\milli\volt}}{\SI{1450}{\milli\volt}} = \SI{8.4}{\percent}$.

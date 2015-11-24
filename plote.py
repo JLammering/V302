@@ -5,22 +5,23 @@ v, U_Br = np.genfromtxt('datene.txt', unpack=True)
 
 omega = v/240
 
-plt.plot(omega, (np.absolute(U_Br/4.36))**2,'.', label='Messwerte')
-plt.yscale('log')
-plt.xlim(0, 10)
-plt.ylabel(r'$(U_BR/U_S) / 1$')
-plt.xlabel(r'$\omega / 1$')
+plt.plot(omega, U_Br/4.36,'rx', label='Messwerte')
+plt.xscale('log')
+plt.xlim(-10,1000)
+plt.ylabel(r'$(U_BR/U_S) $')
+plt.xlabel(r'$\nu \ /\ \nu_0$')
 plt.legend(loc='best')
 
-v = np.linspace(0,1000000, 100000)
-v_0 = 1/(2*np.pi*1000*(6.629e-7))
-print('v_0=  ', v_0)
-omega = v/v_0
-y=(1/9)*(((omega**2)-1)**2)/((1-(omega**2)**2)+9*(omega**2))
-plt.plot(omega, np.absolute(y),'-', label='theorie-Kurve')
-plt.xlim(0, 10)
-plt.ylabel(r'$U_BR/U_S / 1$')
-plt.xlabel(r'$\omega / 1$')
+
+def f(v):
+   return np.sqrt((1/9)*(v**2-1)**2/((1-v**2)**2+9*v**2))
+
+x_plot = np.linspace(0.01, 960000, 1000000)
+plt.plot(x_plot/240, f(x_plot/240), 'b-', label=r'\text{Theoriekurve} $U_{Br} \ /\ U_s$', linewidth=0.5)
+plt.xscale('log')
+plt.xlim(-10,1000)
+plt.ylabel(r'$U_{BR}/U_S$')
+plt.xlabel(r'$\nu \ /\ \nu_0$')
 plt.legend(loc='best')
 
 

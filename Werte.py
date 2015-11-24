@@ -97,7 +97,7 @@ R3 = ufloat(375, 375*0.005)
 
 Cx1 = C2*R4/R3
 
-print('Cx1 =', Cx1,'  C2 =', C2,'  R4 =',R4,'  R3 =', R3)
+print('Cx1 =', Cx1 ,'  C2 =', C2,'  R4 =',R4,'  R3 =', R3)
 
 print('2.Messung:')
 
@@ -161,7 +161,7 @@ print('Cxm= ',Cxm)
 
 #Wert 9(Cx mit Rx)
 print(' ')
-print('Wert 3: ')
+print('Wert 9: ')
 
 print('1.Messung:')
 

@@ -295,8 +295,10 @@ print('Rxm= ',Rxm)
 
 print('Aufgabe f: ')
 
-U2 = 15e-3/(9/(9+16*4))#Oberwellenspannung
+omega = 2
+f = np.sqrt(((omega**2 -1)**2)/((1-omega**2)**2 +16*omega**2))
+U2 = 15e-3/np.sqrt(f)#Oberwellenspannung
 
-k = U2/1450e-3#Klirrfaktor
+k = U2/4.36#Klirrfaktor
 
-print('Klirrfaktor k= ',k, 'U2= ',U2)
+print('Klirrfaktor k= ',k, 'U2= ',U2, 'f(2) = ',f)

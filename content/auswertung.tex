@@ -2,7 +2,7 @@
 \label{sec:Auswertung}
 
 Zum Berechnen der einzelen Werte und des
-Mittelwerts wurde
+Mittelwerts wird
 uncertainties \cite{uncertainties} benutzt. Hier wird der Wert
 und der Fehler mit  der Formel nach Gauß'scher Fehlerfortpflanzung
 
@@ -17,7 +17,7 @@ berechnet \eqref{eqn:gauss}.
 \subsection{Wheatstonesche Brücke}
 
 Mit Hilfe der Wheatstonesche Brücke wurden 2 unbekannte Widerstände bestimmt.
-Die Formel, die verwendet wurde, ist die Folgende:
+Die Formel, die verwendet wird, ist die Folgende:
 
 \begin{equation}
   R_x = R_2\frac{R_3}{R_4}.
@@ -27,7 +27,7 @@ Die Formel, die verwendet wurde, ist die Folgende:
 Hierbei ist $R_x$ der unbekannte Widerstand, $R_2$ ist der bekannnte
 Widerstand als festes Bauteil und $R_3$ und $R_4$ sind die mit dem
 Potentiometer bestimmten Werte.
-Zur Berechnung des Mittelwerts wurde die Formel \eqref{eqn:Rxm} benutzt.
+Zur Berechnung des Mittelwerts wird die Formel \eqref{eqn:Rxm} benutzt.
 
 \begin{equation}
   R_{xm} = \frac{1}{3}(R_{x1} + R_{x2} + R_{x3})
@@ -96,7 +96,7 @@ bestimmt.
 \end{equation}
 
 Hierbei ist $C_2$ ein Kondensator mit bekannter fester Kapazität. $R_3$ und
-$R_4$ wurden mit dem Potentiometer bestimmt.
+$R_4$ wird mit dem Potentiometer bestimmt.
 Bei den realen Kondensatoren wird  der Widerstand mit Formel
 \eqref{eqn:Widerstand} berechnet.
 
@@ -104,7 +104,7 @@ Der Mittelwert des Widerstands wird wieder mit Gleichung \eqref{eqn:Rxm} berechn
 Außerdem wird der Mittelwert der Kapazität mit Gleichung \eqref{eqn:Cxm} berechnet.
 
 \begin{equation}
-  Cxm = \frac{1}{3}(C_{x1} + C_{x2} + C_{x3})
+  C_{\text{xm}} = \frac{1}{3}(C_{x1} + C_{x2} + C_{x3})
   \label{eqn:Cxm}
 \end{equation}
 
@@ -122,7 +122,7 @@ jeweiligen Messung.
   \label{tab:Kapazitaet1}
   \begin{tabular}{c c c c}
     \toprule
-    $C_2 \ /\ 10^-7 \si{\farad}$ & $R_3 \ /\ \si{\Omega}$ & $R_4 \ /\ \si{\Omega}$ & $C_{xi} \ /\ 10^-7 \si{\farad}$\\
+    $C_2 \ /\ 10^{-7} \si{\farad}$ & $R_3 \ /\ \si{\Omega}$ & $R_4 \ /\ \si{\Omega}$ & $C_{xi} \ /\ 10^{-7} \si{\farad}$\\
     \midrule
     \num{3.990 +- 0.008} & \num{375 +- 2} & \num{625 +- 3} & \num{6.65 +- 0.05}\\
     \num{7.50 +- 0.02} & \num{530 +- 3} & \num{470 +- 2} & \num{6.65 +- 0.05}\\
@@ -144,7 +144,7 @@ Der Mittelwert beträgt dann $C_{xm} = \SI{6.63(3)e-7}{\farad}$.
   \label{tab:Kapazitaet3}
   \begin{tabular}{c c c c}
     \toprule
-    $C_2 \ /\ 10^-7 \si{\farad}$ & $R_3 \ /\ \si{\Omega}$ & $R_4 \ /\ \si{\Omega}$ & $C_{xi} \ /\ 10^-7 \si{\farad}$\\
+    $C_2 \ /\ 10^{-7} \si{\farad}$ & $R_3 \ /\ \si{\Omega}$ & $R_4 \ /\ \si{\Omega}$ & $C_{xi} \ /\ 10^{-7} \si{\farad}$\\
     \midrule
     \num{3.990 +- 0.008} & \num{486 +- 2} & \num{514 +- 3} & \num{4.22 +- 0.03}\\
     \num{7.50 +- 0.02} & \num{640 +- 3} & \num{360 +- 2} & \num{4.22 +- 0.03}\\
@@ -154,7 +154,7 @@ Der Mittelwert beträgt dann $C_{xm} = \SI{6.63(3)e-7}{\farad}$.
 \end{table}
 
 In Tabelle \ref{tab:Kapazitaet3} sind die Messdaten und die einzelnen
-Ergebnisse bei der Bestimmung der Kapazität von Wert 1 aufgetragen.
+Ergebnisse bei der Bestimmung der Kapazität von Wert 3 aufgetragen.
 
 Der Mittelwert beträgt dann $C_{xm} = \SI{4.21(2)e-7}{\farad}$.
 
@@ -209,7 +209,7 @@ mit Gleichung \eqref{eqn:Lxm} bestimmt.
 Es gilt:
 
 \begin{equation}
-  Lxm = \frac{1}{3}(L_{x1} + L_{x2} + L_{x3}).
+  L_{\text{xm}} = \frac{1}{3}(L_{x1} + L_{x2} + L_{x3}).
   \label{eqn:Lxm}
 \end{equation}
 
@@ -241,6 +241,7 @@ Der Mittelwert des Widerstands beträgt nach Gleichung \eqref{eqn:Rxm}
 $R_{xm} = \SI{91(2)}{\Omega}.$
 
 \subsection{Maxwell-Brücke}
+\label{sec:auswmaxw}
 
 Darauf folgend wird die Induktivität und der Widerstand von Spule Wert 17 erneut
 bestimmt. Diesmal aber mit Hilfe der Maxwell-Brücke.
@@ -336,9 +337,9 @@ $R_{xm} = \SI{90(2)}{\Omega}.$
 In Tabelle \ref{tab:frequenz} sind die Messwerte aus der Messung an der
 Wien-Robinson-Brücke aufgetragen.
 
-Außerdem wurde $U_S$ auf \SI{4.36}{\volt} bestimmt. $R$ war \SI{1}{\kilo\Omega}
-groß. Als Kondensator wurde Wert 1 benutzt, dessen Kapazität $C_{xm}$ in Kapitel
-\ref{subsubsec:kapme} auf gerundete \SI{663}{\nano\farad} bestimmt wurde.
+Außerdem wird $U_S$ auf \SI{4.36}{\volt} bestimmt. $R$ ist \SI{1}{\kilo\Omega}
+groß. Als Kondensator wird Wert 1 benutzt, dessen Kapazität $C_{xm}$ in Kapitel
+\ref{subsubsec:kapme} auf gerundete \SI{663}{\nano\farad} bestimmt wird.
 
 \FloatBarrier
 
@@ -356,7 +357,7 @@ $\nu \ /\ \nu_0$ aufgetragen. Außerdem ist dort die Theoriekurve nach Gleichung
 \eqref{eqn:WRBG} eingezeichnet. Der Plot wurde mit dem package Matplotlib aus
 python erstellt \cite{matplotlib}.
 
-Zu bestimmen war außerdem das $\nu_0$ bei dem die Brückenspannung minimal wird.
+Zu bestimmen ist außerdem das $\nu_0$ bei dem die Brückenspannung minimal wird.
 
 Dies erfolgt mit Gleichung \eqref{eqn:nu0}:
 
@@ -374,8 +375,8 @@ $U_2$ wird mit
 
 $U_2 = \frac{U_{Br}}{f(2)}$ bestimmt.
 
-In diesem Fall : $U_2 = \frac{\SI{15}{\milli\volt}}{\frac{9}{73}} =
-\SI{122}{\milli\volt}$.
+In diesem Fall : $U_2 = \frac{\SI{15}{\milli\volt}}{\sqrt{\frac{9}{73}}} =
+\SI{25.3}{\milli\volt}$.
 
 Somit ist der Klirrfaktor:\\
-\\$k = \frac{\SI{122}{\milli\volt}}{\SI{1450}{\milli\volt}} = \SI{8.4}{\percent}$.
+\\$k = \frac{\SI{25.3}{\milli\volt}}{\SI{4.36}{\volt}} = \SI{0.58}{\percent}$.

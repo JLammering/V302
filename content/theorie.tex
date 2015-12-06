@@ -10,7 +10,7 @@ berechnen kann.
 Bei der sogenannten abgeglichenen Brückenschaltung werden variable
 Widerstände eingesetzt, die so verändert werden, dass die Brückenspannung
 verschwindet.
-Dann kann man über die Kirchhoffschen Gesetze, also die Maschenregel
+Dann kann über die Kirchhoffschen Gesetze, also die Maschenregel
 
 \begin{equation}
   \sum_k U_k = 0,
@@ -23,15 +23,15 @@ und die Knotenregel
   \sum_k I_k = 0,
 \end{equation}
 
-die besagt, dass die Summe der Ströme in einem Knoten null ist, den unbekannten
-Widerstand bestimmen.
-Den grundlegenden Aufbau einer solchen Schaltung kann man in Abbildung
-\ref{fig:AllgBr} erkennen.
+die besagt, dass die Summe der Ströme in einem Knoten null ist, der unbekannte
+Widerstand bestimmt werden.
+Den grundlegenden Aufbau einer solchen Schaltung ist in Abbildung
+\ref{fig:AllgBr} dargestellt.
 
 \begin{figure}[h]
   \centering
   \includegraphics[height=6.25cm]{AllgBr.png}
-  \caption{Allgemeiner Aufbau einer Brückenschaltung}
+  \caption{Allgemeiner Aufbau einer Brückenschaltung \cite{anleitung}}
   \label{fig:AllgBr}
 \end{figure}
 
@@ -56,8 +56,8 @@ ist in diesem Fall
 
 \subsection{Wheatstonesche Brücke}
 
-Bei der Wheatstoneschen Widerstandsmessbrücke, die man in Abbildung
-\ref{fig:WheBr} erkennen kann, wird für die
+Bei der Wheatstoneschen Widerstandsmessbrücke, die in Abbildung
+\ref{fig:WheBr} abgebildet ist, wird für die
 Widerstände $R_3$ und $R_4$ ein Potentiometer eingesetzt.
 Bei diesem Gerät wird zwischen
 drei Knoten ein Gesamtwiderstand angelegt, der dann zwischen dem ersten und
@@ -67,7 +67,7 @@ ist. Als Nullindikator kann zum Beispiel ein Oszilloskop verwendet werden.
 \begin{figure}[h]
   \centering
   \includegraphics[height=6.25cm]{WheBr.png}
-  \caption{Wheatstonesche Brückenschaltung}
+  \caption{Wheatstonesche Brückenschaltung \cite{anleitung}}
   \label{fig:WheBr}
 \end{figure}
 
@@ -108,7 +108,7 @@ Daraus ergibt sich dann über die Kirchhoffschen Gesetze bei einer
 genullten Brückenspannung die unbekannte Kapazität
 
 \begin{equation}
-  C_x = C_2\frac{R_3}{R_4}
+  C_x = C_2\frac{R_4}{R_3}
   \label{eqn:KapId}
 \end{equation}
 
@@ -130,7 +130,7 @@ dahinter geschalteten Widerstand wie in Abbildung \ref{fig:ReiheImp}.
 \begin{figure}
   \centering
   \includegraphics[height=1.5cm]{ReiheImp.png}
-  \caption{Ersatzschaltbild eines realen Kondensators}
+  \caption{Ersatzschaltbild eines realen Kondensators \cite{anleitung}}
   \label{fig:ReiheImp}
 \end{figure}
 
@@ -145,14 +145,14 @@ dargestellt.
 \begin{figure}[h]
   \centering
   \includegraphics[height=6.25cm]{KapBr.png}
-  \caption{Kapazitätsmessbrücke für reale Kondensatoren}
+  \caption{Kapazitätsmessbrücke für reale Kondensatoren \cite{anleitung}}
   \label{fig:KapBr}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics[height=6.25cm]{IndBr.png}
-  \caption{Induktivitätsmessbrücke für reale Spulen}
+  \caption{Induktivitätsmessbrücke für reale Spulen \cite{anleitung}}
   \label{fig:IndBr}
 \end{figure}
 
@@ -190,7 +190,7 @@ Abbildung \ref{fig:MaxBr} dargestellt.
 \begin{figure}[h]
   \centering
   \includegraphics[height=6.25cm]{MaxBr.png}
-  \caption{Maxwellsche Brückenschaltung}
+  \caption{Maxwellsche Brückenschaltung \cite{anleitung}}
   \label{fig:MaxBr}
 \end{figure}
 
@@ -223,24 +223,12 @@ Den Aufbau dieser Schaltung kann man in Abbildung \ref{fig:WRBr} erkennen.
 \begin{figure}[h]
   \centering
   \includegraphics[height=6.25cm]{WRBr.png}
-  \caption{Wien-Robinson-Brückenschaltung}
+  \caption{Wien-Robinson-Brückenschaltung \cite{anleitung}}
   \label{fig:WRBr}
 \end{figure}
 
-Die Impedanz der Kondensator-Widerstand-Reihe beträgt
-\begin{equation}
-  Z_3 = R - \frac{i}{\omega C}
-\end{equation}
-und die der Kondensator-Widerstand-Parallelschaltung
-\begin{equation}
-  Z_4 = \frac{R - i\omega C R^2}{1 + \omega^2 C^2 R^2} .
-\end{equation}
 Aus der allgemeinen Gleichung für die Brückenspannung \eqref{eqn:Brs}
-folgt dann
-\begin{equation}
-  U_B = \frac{\omega^2 R^2 C^2 -1}{3(1 - \omega^2 R^2 C^2) + 9 i \omega R C}U_S
-\end{equation}
-und für den Betrag des Verhätnisses zwischen Brücken- und Speisespannung
+folgt dann für den Betrag des Verhätnisses zwischen Brücken- und Speisespannung
 \begin{equation}
   \Bigl|\frac{U_B}{U_S}\Bigr|^2 = \frac{(\omega^2 R^2 C^2 -1)^2}{9\Bigl
   ((1-\omega^2 R^2 C^2)^2 + 9 \omega^2 R^2 C^2\Bigr)} .
@@ -251,6 +239,16 @@ Die Brückenspannung wird dann also bei Kreisfrequenz
   \omega = \omega_0 = \frac{1}{RC}
 \end{equation}
 Null.
+Nun wird das Frequenzverhältnis
+\begin{equation}
+  \Omega = \frac{\omega}{\omega_0}
+\end{equation}
+eingeführt, sodass die Gleichung \eqref{eqn:WRBG} durch
+\begin{equation}
+    \Bigl|\frac{U_B}{U_S}\Bigr|^2 = \frac{1}{9} \frac{(\Omega^2-1)^2}
+    {(1-\Omega^2)^2 + 9\Omega^2}
+\end{equation}
+dargestellt werden kann.
 An diesen Ergebnissen erkennt man, dass die Wien-Robinson-Brücke wie ein
 Filter fungiert, der in dem kontinuierlichen Frequenzspektrum ein Minumum
 an der Frequenz $\omega_0$ anzeigt. Dadurch ist es möglich mit dieser
